@@ -50,7 +50,7 @@ export class EventService {
       title: data.title,
       date: data.date,
       excerpt: data.excerpt,
-      mainImage: `/assets/events/${encodeURIComponent(slug)}/${data.mainImage}`
+      mainImage: `assets/events/${encodeURIComponent(slug)}/${data.mainImage}`
     };
   }
 

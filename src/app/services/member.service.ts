@@ -34,7 +34,7 @@ export class MemberService {
     return {
       slug,
       name: data.name as string,
-      mainImage: `/assets/members/${encodeURIComponent(slug)}/${data.mainImage}`
+      mainImage: `assets/members/${encodeURIComponent(slug)}/${data.mainImage}`
     };
   }
 }
