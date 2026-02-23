@@ -53,10 +53,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 150px; /* adjust how much fade you want */
+  height: 150px;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
-  pointer-events: none; /* so it doesn't block the button */
-  z-index: 1; /* above video, below button */
+  pointer-events: none;
+  z-index: 1;
 }
 
 .events-section{
