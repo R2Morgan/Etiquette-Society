@@ -14,7 +14,7 @@
   <button class="button animate" (click)="goToPage(EMPageType.EVENTS)" appScrollAnimate>EXPLORE OUR EVENTS!</button>
   <div class="carousel">
     <div class="carousel-track">
-      <div class="carousel-item animate" *ngFor="let event of events; let i = index" appScrollAnimate>
+      <div class="carousel-item" *ngFor="let event of events; let i = index" appScrollAnimate>
         <img [src]="event.mainImage" [alt]="event.title" class="animate" appScrollAnimate/>
         <div class="carousel-text">
           <h3 class="animate" appScrollAnimate>{{ event.title }}</h3>

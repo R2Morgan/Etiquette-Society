@@ -7,6 +7,7 @@ import {MemberPageComponent} from "./components/members/member-page/member-page.
 import {MembershipsPageComponent} from "./components/memberships-page/memberships-page.component";
 import {OurStoryPageComponent} from "./components/our-story-page/our-story-page.component";
 import {PodcastPageComponent} from "./components/podcast-page/podcast-page.component";
+import {WhyJoinPageComponent} from "./components/why-join-page/why-join-page.component";
 
 export const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -17,5 +18,6 @@ export const routes: Routes = [
   {path: 'member', component: MemberPageComponent},
   {path: 'memberships', component: MembershipsPageComponent},
   {path: 'our-story', component: OurStoryPageComponent},
-  {path: 'podcast', component: PodcastPageComponent}
+  {path: 'podcast', component: PodcastPageComponent},
+  {path: 'why-join', component: WhyJoinPageComponent},
 ];

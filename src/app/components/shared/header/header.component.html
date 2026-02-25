@@ -2,7 +2,14 @@
   <nav>
     <div class="shadow" [class.hide]="isHidden">
     <a class="menu-entry">PODCAST</a>
-    <a class="menu-entry">OUR STORY</a>
+      <div class="menu-entry dropdown">
+        <span>OUR STORY</span>
+        <div class="dropdown-content">
+          <a href="/our-story">Our Story</a>
+          <a href="/members-overview">Members</a>
+          <a href="/why-join">Why Join?</a>
+        </div>
+      </div>
     <a>
       <img src="assets/logo/logo_noBg.png" alt="Logo">
     </a>

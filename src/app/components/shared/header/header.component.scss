@@ -3,9 +3,11 @@ img{
 }
 
 nav{
+  display: flex;
   align-items: center;
   width: 100vw;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .shadow{
@@ -55,4 +57,51 @@ nav{
 
 .menu-entry:hover::after {
   width: 100%;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 110%;
+  left: -50%;
+  text-align: center;
+  background-color: #1a1a1a;
+  min-width: 15vw;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 0.8rem 1rem;
+  display: block;
+  color: #f2e4c3;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;             /* visible */
+  visibility: visible;    /* clickable */
+  transform: translateY(0); /* move into position */
 }
