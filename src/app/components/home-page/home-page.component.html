@@ -1,50 +1,66 @@
 <section class="hero-section">
   <div class="video-bg">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="assets/video/banner.mov" type="video/mp4" />
+    <video #heroVideo autoplay muted loop playsinline preload="metadata">
+      <source src="assets/video/banner.mp4" type="video/mp4" />
     </video>
   </div>
   <div class="hero-gradient"></div>
-  <button class="cta">JOIN US!</button>
+  <button class="button animate" (click)="goToPage(EMPageType.MEMBERSHIPS)" appScrollAnimate>JOIN US!</button>
 </section>
 <section class="events-section">
-  <h2 class="title">Discover Our Past Events</h2>
-  <p class="undertitle">Step into a world of elegance, intrigue, and distinction.
+  <h2 class="title animate" appScrollAnimate>Discover Our Past Events</h2>
+  <p class="undertitle animate" appScrollAnimate>Step into a world of elegance, intrigue, and distinction.
     Refined nights for men who move with style and purpose.</p>
-  <button class="cta">EXPLORE OUR EVENTS!</button>
+  <button class="button animate" (click)="goToPage(EMPageType.EVENTS)" appScrollAnimate>EXPLORE OUR EVENTS!</button>
   <div class="carousel">
     <div class="carousel-track">
-      <div class="carousel-item" *ngFor="let event of events; let i = index">
-        <img [src]="event.mainImage" [alt]="event.title" />
+      <div class="carousel-item animate" *ngFor="let event of events; let i = index" appScrollAnimate>
+        <img [src]="event.mainImage" [alt]="event.title" class="animate" appScrollAnimate/>
         <div class="carousel-text">
-          <h3>{{ event.title }}</h3>
-          <p>{{ event.excerpt }}</p>
-          <button>Find Our More!</button>
+          <h3 class="animate" appScrollAnimate>{{ event.title }}</h3>
+          <p class="animate" appScrollAnimate>{{ event.excerpt }}</p>
+          <button class="button animate" (click)="goToPage(EMPageType.EVENT)" appScrollAnimate>Find Our More!</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 <section class="summary-section">
-  <h2>Step Into Our World</h2>
-  <p>Curated highlights of our society — the people, the podcast, the stories,
+  <h2 class="animate" appScrollAnimate>Step Into Our World</h2>
+  <p class="animate" appScrollAnimate>Curated highlights of our society — the people, the podcast, the stories,
     the memberships that define us</p>
   <div class="cards-box">
-    <div class="card cardA">
+    <div class="card cardA animate" appScrollAnimate>
       <img src="assets/podcasts/02/main.png" alt="Podcast Cover">
-    </div>
-    <div class="card cardB">
-      <img [src]="featuredMember?.mainImage" [alt]="featuredMember?.name" />
-    </div>
-    <div class="card cardC">
-      <img src="assets/others/Our_Story.jpg" alt="Our Story">
-    </div>
-    <div class="card cardD">
-      <img src="assets/others/memberships_banner.png" alt="Our Story">
       <div class="card-text">
+        <h2>Etichete si Suete</h2>
+        <p>Discover our new Podcast - Conversations on character, culture, discipline, and the art of living well.</p>
+        <button class="button" (click)="goToPage(EMPageType.PODCAST)">Listen to the Latest Episode</button>
+      </div>
+    </div>
+    <div class="card cardB animate" appScrollAnimate>
+      <img [src]="featuredMember?.mainImage" [alt]="featuredMember?.name" />
+      <div class="card-text">
+        <h2>Member Highlight</h2>
+        <h3>- {{featuredMember?.name}} -</h3>
+        <p>{{featuredMember?.description}}</p>
+        <button class="button" (click)="goToPage(EMPageType.MEMBER)">Meet Him</button>
+      </div>
+    </div>
+    <div class="card cardC animate" appScrollAnimate>
+      <img src="assets/others/Our_Story.jpg" alt="Our Story">
+      <div class="card-text">
+        <h2>The Story Behind the Etiquette</h2>
+        <p>How a modern brotherhood rooted in tradition came to life.</p>
+        <button class="button" (click)="goToPage(EMPageType.OUR_STORY)">Discover Our Journey</button>
+      </div>
+    </div>
+    <div class="card cardD animate" appScrollAnimate>
+      <img src="assets/others/memberships_banner.png" alt="Our Story">
+      <div class="cardD-text">
         <h2>We are currently open to new members!</h2>
         <p>For gentlemen who value tradition, character, and refinement.</p>
-        <button>Find More About Our Plans</button>
+        <button class="button" (click)="goToPage(EMPageType.MEMBERSHIPS)">Find More About Our Plans</button>
       </div>
     </div>
   </div>

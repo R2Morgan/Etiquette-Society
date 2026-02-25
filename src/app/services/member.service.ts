@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
 export interface MemberMetadata {
   slug: string;
   name: string;
+  description: string;
   mainImage: string;
 }
 
@@ -34,6 +35,7 @@ export class MemberService {
     return {
       slug,
       name: data.name as string,
+      description: data.description as string,
       mainImage: `assets/members/${encodeURIComponent(slug)}/${data.mainImage}`
     };
   }
