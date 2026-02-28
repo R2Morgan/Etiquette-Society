@@ -1,9 +1,12 @@
 import {Component, HostListener} from '@angular/core';
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'header-component',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
