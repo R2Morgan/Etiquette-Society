@@ -1,0 +1,271 @@
+.component-wrapper{
+  background: linear-gradient(135deg,rgba(5, 5, 5, 1) 0%, rgb(23, 16, 0) 100%);
+}
+
+.overview-section{
+  height: 100vh;
+}
+
+.overview-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.right-side{
+  display: flex;
+  flex-direction: row;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20% 12% 0 12%;
+  flex-wrap: wrap;
+  height: 80vh;
+  width: 100%;
+}
+
+.card{
+  width: 18vw;
+  height: 34vh;
+  margin: 10px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.cardA{
+  height: 40vh;
+}
+
+.cardB{
+  height: 33vh;
+  background-image: url("../../../assets/podcasts/1.png");
+  background-size: cover;
+}
+
+.cardC{
+  height: 33vh;
+  background-image: url("../../../assets/podcasts/2.png");
+  background-size: cover;
+}
+
+.cardD{
+  height: 40vh;
+}
+
+.cardA div {
+  aspect-ratio: 1 / 2;
+  margin-top: -10px;
+}
+
+.cardA div iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.find-us{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3%;
+  transition-delay: 0.5s !important;
+}
+
+.youtube .bi{
+  color: #FF0000;
+}
+
+.spotify .bi{
+  color: #1db954;
+}
+
+.youtube, .spotify{
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.5% 10% 0.5% 5%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.find-us-text p{
+  margin: 0;
+}
+
+.find-us-text{
+  margin: 0 15%;
+}
+
+.available-on{
+  margin: 0 0 5px 0 !important;
+  white-space: nowrap;
+  color: grey;
+}
+
+.platform{
+  font-size: 1.1rem;
+  color: #eaeaea;
+}
+
+.find-us-text div{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+}
+
+.bi{
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.youtube:hover, .spotify:hover{
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.spotify .bi{
+  font-size: 3rem;
+  padding: 5.5% 0;
+}
+
+.main{
+  height: 100%;
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+  font-size: 5rem;
+}
+
+.main h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1000;
+  font-size: 5rem;
+  color: #5f5237;
+  margin-bottom: 0;
+  margin-top: 20%;
+}
+
+.main p:nth-child(2){
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition-delay: 0.2s;
+}
+
+.main p:nth-child(3){
+  color: #f2e4c3;
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-bottom: 10%;
+  transition-delay: 0.3s;
+}
+
+.main p:nth-child(4){
+  color: white;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  transition-delay: 0.4s;
+}
+
+.previous-episodes-section{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+.previous-episodes-section h1{
+  margin-top: 5%;
+  color: white;
+}
+
+.previous-episodes-section p{
+  color: #f2e4c3;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 3%;
+}
+
+.episodes-wrapper {
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.episode iframe {
+  width: 100%;
+  height: 152px;
+  border: 0;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.episode iframe:hover{
+  transform: scale(1.05);
+}
+
+.episode-separator {
+  height: 1px;
+  background-color: #555;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-animation{
+  transition-delay: 0.3s;
+}
+
+.card-animation2{
+  transition-delay: 0.5s;
+}
+
+.card-animation3{
+  transition-delay: 0.7s;
+}
+
+.card-animation4{
+  transition-delay: 0.9s;
+}
