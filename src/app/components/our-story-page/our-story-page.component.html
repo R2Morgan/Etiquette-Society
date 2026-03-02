@@ -1,1 +1,56 @@
-<p>our-story-page works!</p>
+<section class="carousel-section">
+  <div class="carousel-container animate" appScrollAnimate>
+    <div class="carousel-stage">
+      <div class="carousel-card"
+           *ngFor="let item of achievements; let i = index"
+           [ngClass]="getPositionClass(i)"
+           (click)="goTo(i)"
+      >
+        <div class="card-image"
+             [style.backgroundImage]="'url(' + item.image + ')'">
+        </div>
+
+        <div class="card-content">
+          <div class="card-header">
+            <h3>{{ item.title }}</h3>
+            <span class="tag-pill">{{ item.tag }}</span>
+          </div>
+
+          <p>{{ item.description }}</p>
+          <div class="card-footer">
+            <small>{{ item.date }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="nav-btn" (click)="prev()">‹</button>
+
+      <div class="pagination-indicators">
+        <div
+          class="dot"
+          *ngFor="let item of achievements; let i = index"
+          [class.active]="i === activeIndex"
+          (click)="goTo(i)"
+        ></div>
+      </div>
+
+      <button class="nav-btn" (click)="next()">›</button>
+    </div>
+  </div>
+</section>
+<section class="main-section animate-fade-in" [class.visible]="mainVisible">
+  <h1 >{{ sections[activeIndex].title }}</h1>
+  <p class="intro">
+    {{ sections[activeIndex].description }}
+  </p>
+  <div class="content-wrapper">
+    <div class="text-block">
+      <p [innerHTML]="sections[activeIndex].text"></p>
+    </div>
+    <div class="image-block">
+      <img [src]="sections[activeIndex].image" alt="{{ sections[activeIndex].title }}">
+    </div>
+  </div>
+</section>
