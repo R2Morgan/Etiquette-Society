@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {forkJoin, map, Observable} from "rxjs";
+import {BaseMarkdownService} from "./base-markdown.service";
 
 export interface EventMetadata {
   slug: string;
@@ -13,10 +14,12 @@ export interface EventMetadata {
 @Injectable({
   providedIn: 'root'
 })
-export class EventService {
+export class EventService extends BaseMarkdownService {
   private eventsFolder = 'assets/events';
 
-  constructor(private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http);
+  }
 
   getEvents(): Observable<EventMetadata[]> {
     const slugs = [
@@ -38,13 +41,7 @@ export class EventService {
   }
 
   private parseFrontmatter(md: string, slug: string): EventMetadata {
-    const frontmatter = md.split('---')[1];
-    const lines = frontmatter.split('\n').filter(line => line.includes(':'));
-    const data: any = {};
-    lines.forEach(line => {
-      const [key, ...rest] = line.split(':');
-      data[key.trim()] = rest.join(':').trim().replace(/"/g, '');
-    });
+    const data = this.baseParseFrontmatter(md);
     return {
       slug,
       title: data.title,

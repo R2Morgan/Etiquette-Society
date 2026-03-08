@@ -1,0 +1,206 @@
+.section1{
+  padding-top: 23vh;
+  padding-bottom: 8vh;
+  background: linear-gradient(135deg,rgba(74, 42, 18, 1) 1%, rgba(36, 25, 7, 1) 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section1 div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5vw;
+  justify-content: center;
+}
+
+.image1{
+  width: 20vw;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 150px;
+}
+
+.image2{
+  width: 20vw;
+  height: 74vh;
+  object-fit: cover;
+  border-radius: 150px;
+}
+
+.image3{
+  width: 20vw;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 150px;
+}
+
+.image1, .image2, .image3{
+  box-shadow: #f2e4c3 0 0 30px;
+  outline: 2px solid #bca372;
+  outline-offset: 6px;
+  transition: transform 0.5s ease;
+}
+
+.image1:hover, .image2:hover, .image3:hover{
+  transform: scale(1.1);
+}
+
+.name{
+  position: absolute;
+  font-size: 3rem;
+  top: 65vh;
+  left: 29vw;
+  color: #f2e4c3;
+  font-family: "  ", cursive;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.name span{
+  position: absolute;
+  left: 10vw;
+  width: 500px;
+}
+
+.membership{
+  position: absolute;
+  top: 88vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  background: #f2e4c3;
+  padding: 15px 35px;
+  border-radius: 150px;
+  transition: transform 0.5s ease;
+
+}
+
+.section2{
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, rgb(124, 82, 35) 1%, rgb(62, 35, 4) 100%);
+  padding-bottom: 10vh;
+  padding-top: 15vh;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-image{
+  width: 25vw;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: #f2e4c3 0 0 30px;
+  outline: 2px solid #bca372;
+  outline-offset: 25px;
+  margin-left: 5vw;
+}
+
+.main div{
+  display: flex;
+  flex-direction: column;
+}
+
+.paragraph1{
+  width: 30vw;
+  padding: 3vh 2vw;
+  border-radius: 25px;
+  background: rgba(170, 105, 36, 0.4);
+  font-size: 1.3vw;
+  color: #f2e4c3;
+  margin-bottom: 5vh;
+  margin-left: 15vw;
+  box-shadow: rgba(37, 20, 7, 0.7) 0 0 30px;
+}
+
+.paragraph2{
+  width: 30vw;
+  padding: 3vh 2vw;
+  background: rgba(170, 105, 36, 0.4);
+  font-size: 1.3vw;
+  border-radius: 25px;
+  color: #f2e4c3;
+  margin-left: 25vw;
+  box-shadow: rgba(37, 20, 7, 0.7) 0 0 30px;
+}
+
+.instagram{
+  margin-top: 10vh;
+  width: min-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.test{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon{
+  width: 65px;
+  height: 65px;
+  border: 2px solid #bca372;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(37,20,7,0.7) 0 0 30px;
+  background: rgb(92,59,22);
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.instagram i{
+  color: #bca372;
+  font-size: 2rem;
+}
+
+.link{
+  background:#f2e4c3;
+  color: rgba(37,20,7,1);
+  border-radius:0 50px 50px 0;
+  padding: 0;
+  width:0;
+  overflow:hidden;
+  white-space:nowrap;
+  transition: width 0.5s ease, padding 0.5s ease;
+}
+
+.instagram:hover .link{
+  width: 430px;
+  margin-left: -1vw;
+  padding: 12px 25px 12px 50px;
+}
+
+.instagram:hover .icon{
+  transform: rotate(360deg);
+}
+
+a{
+  text-decoration: none;
+  color: rgba(37,20,7,1);
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-profile-picture{
+  transition: transform 0.5s ease;
+}
+
+.main-profile-picture:hover{
+  transform: scale(1.1);
+}

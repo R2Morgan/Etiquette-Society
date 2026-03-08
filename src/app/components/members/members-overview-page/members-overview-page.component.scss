@@ -1,0 +1,126 @@
+.wrapper{
+  background-image: url("/assets/members/background2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh;
+}
+
+.s{
+  height: 100vh;
+}
+
+.framed-img {
+  position: relative;
+  box-shadow: #000000 0 0 20px 5px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.framed-img img {
+  height: 350px;
+  width: 265px;
+  object-fit: cover;
+  padding-bottom: 2px;
+}
+
+.framed-img::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: url('/assets/about-us/painting-frame.png') no-repeat center/cover;
+}
+
+.gold-text {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient( 180deg, #f8e7b0 0%, #d4af37 40%, #b8860b 60%, #f8e7b0 100% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1{
+  text-align: center;
+  position: sticky;
+  bottom: 20vh;
+  width: 100%;
+  filter: drop-shadow(6px 6px 10px black);
+}
+
+.members-wrapper {
+  height: 86.5vh;
+  overflow-y: auto;
+}
+
+.framed-img:hover{
+  transform: scale(1.1);
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+section div{
+  display: flex;
+  flex-direction: row;
+  margin: 1.1vh auto;
+  gap: 10vw;
+  flex-wrap: wrap;
+}
+
+.section-2{
+  padding: 5vh 24vw;
+}
+
+.section-3{
+  padding: 5vh 15vw;
+}
+
+.section-3 div{
+  gap: 0;
+  row-gap: 10vh;
+}
+
+.founders-section{
+  margin-top: 18vh;
+}
+
+.affiliates-section{
+  margin-bottom: 10vh;
+}
+
+.framed-img .overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
+  height: 85%;
+  padding: 1rem 0.8rem;
+  opacity: 0;
+
+  background: rgba(25, 25, 25, 0.1);
+  backdrop-filter: blur(6px);
+
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 10px black;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.framed-img:hover .overlay {
+  opacity: 1;
+}
+
+.hasNoDescription{
+  backdrop-filter: blur(6px) grayscale(1) !important;
+}

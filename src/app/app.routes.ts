@@ -15,7 +15,7 @@ export const routes: Routes = [
   {path: 'events-overview', component: EventsOverviewPageComponent},
   {path: 'event', component: EventPageComponent},
   {path: 'members-overview', component: MembersOverviewPageComponent},
-  {path: 'member', component: MemberPageComponent},
+  {path: 'member/:id', component: MemberPageComponent},
   {path: 'memberships', component: MembershipsPageComponent},
   {path: 'our-story', component: OurStoryPageComponent},
   {path: 'podcast', component: PodcastPageComponent},

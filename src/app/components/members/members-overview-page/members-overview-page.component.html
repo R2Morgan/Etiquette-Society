@@ -1,1 +1,53 @@
-<p>members-overview-page works!</p>
+<div class="wrapper">
+  <div class="members-wrapper">
+    <section #section data-title="Founders" class="founders-section section-2">
+        <div>
+          <div class="framed-img" *ngFor="let member of foundingMembers"
+               [ngStyle]="{'cursor': member.description !== '' ? 'pointer' : 'default'}">
+            <img src="{{ member.mainImage }}" alt="{{ member.name }}">
+            <div class="overlay" (click)="getMemberDetails(member)"
+                 [ngClass]=" { hasNoDescription: member.description === '' }">
+              <h3>{{ member.name }}</h3>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section #section data-title="Patrons" class="patrons-section section-2">
+      <div>
+        <div class="framed-img" *ngFor="let member of patronalMembers"
+             [ngStyle]="{'cursor': member.description !== '' ? 'pointer' : 'default'}">
+          <img src="{{ member.mainImage }}" alt="{{ member.name }}">
+          <div class="overlay" (click)="getMemberDetails(member)"
+               [ngClass]=" { hasNoDescription: member.description === '' }">
+            <h3>{{ member.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section #section data-title="Members" class="members-section section-3">
+      <div>
+        <div class="framed-img" *ngFor="let member of regularMembers"
+             [ngStyle]="{'cursor': member.description !== '' ? 'pointer' : 'default'}">
+          <img src="{{ member.mainImage }}" alt="{{ member.name }}">
+          <div class="overlay" (click)="getMemberDetails(member)"
+             [ngClass]=" { hasNoDescription: member.description === '' }">
+            <h3>{{ member.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section #section data-title="Affiliates" class="affiliates-section section-3">
+      <div>
+        <div class="framed-img" *ngFor="let member of affiliateMembers"
+             [ngStyle]="{'cursor': member.description !== '' ? 'pointer' : 'default'}">
+          <img src="{{ member.mainImage }}" alt="{{ member.name }}">
+          <div class="overlay" (click)="getMemberDetails(member)"
+               [ngClass]=" { hasNoDescription: member.description === '' }">
+            <h3>{{ member.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <h1 class="gold-text">{{ currentSection }}</h1>
+</div>

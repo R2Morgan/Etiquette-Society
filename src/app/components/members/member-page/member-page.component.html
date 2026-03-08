@@ -1,1 +1,37 @@
-<p>member-page works!</p>
+<section class="section1">
+  <div class="animate" appScrollAnimate>
+    <img class="image1" src="{{ getPicturePath(1) }}">
+    <img class="image2" src="{{ getPicturePath(2) }}">
+    <img class="image3" src="{{ getPicturePath(3) }}">
+  </div>
+  <h1 class="name animate" appScrollAnimate>{{ getName('first') }}<br><span>{{ getName('last') }}
+  </span></h1>
+  <p class="membership">{{ getRank() }}</p>
+</section>
+<section class="section2">
+  <div class="main">
+    <div>
+      <div class="paragraph1 animate" appScrollAnimate>
+        {{ paragraph1 }}
+      </div>
+      <div class="paragraph2 animate" appScrollAnimate>
+        {{ paragraph2 }}
+      </div>
+    </div>
+    <div class="main-profile-picture">
+      <img class="profile-image animate" src="{{ getPicturePath(0) }}" appScrollAnimate>
+    </div>
+  </div>
+  <div class="test animate" appScrollAnimate>
+    <div class="instagram">
+      <div class="icon">
+        <i class="bi bi-instagram"></i>
+      </div>
+      <div class="link">
+        <a href="{{ member?.instagram }}" target="_blank">
+          {{ member?.instagram }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
