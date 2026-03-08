@@ -1,5 +1,5 @@
 .wrapper{
-  background-image: url("/assets/members/background2.png");
+  background-image: url("../../../../assets/members/background2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
   top: 0; left: 0;
   width: 100%; height: 100%;
   pointer-events: none;
-  background: url('/assets/about-us/painting-frame.png') no-repeat center/cover;
+  background: url('../../../../assets/about-us/painting-frame.png') no-repeat center/cover;
 }
 
 .gold-text {
