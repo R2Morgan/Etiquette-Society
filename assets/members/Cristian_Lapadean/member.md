@@ -3,7 +3,7 @@ name: "Cristian Lapadean-Miron"
 mainImage: "main.jpg"
 description: "Cristian are 29 de ani si este cofondator al grupului Etiquette Society."
 rank: "Founder"
-instagram: "https://www.instagram.com/l.m.cristian19?igsh=bTFna3Bva3pkd2w0"
+instagram: "https://www.instagram.com/l.m.cristian19"
 ---
 
 Member Highlight: Cristian Lapadean-Miron
