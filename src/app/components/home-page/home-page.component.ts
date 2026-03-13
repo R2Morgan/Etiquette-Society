@@ -6,6 +6,8 @@ import {MemberMetadata, MemberService} from "../../services/member.service";
 import {ScrollAnimateDirective} from "../../utils/scroll-animate.directive";
 import {EMPageType} from "../../enums/EMPageType";
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
+import {UpcomingEventPopupComponent} from "./upcoming-event-popup/upcoming-event-popup.component";
 
 @Component({
   selector: 'home-page',
@@ -25,17 +27,27 @@ export class HomePageComponent {
   events: EventMetadata[] = [];
   featuredMember: MemberMetadata | null = null;
   featuredMemberName = "Flaviu_Celsie";
+  protected readonly EMPageType = EMPageType;
 
-  constructor(private router: Router, private eventService: EventService,  private memberService: MemberService) {
+  constructor(private router: Router,
+              private eventService: EventService,
+              private memberService: MemberService,
+              private dialog: MatDialog) {
   }
 
   ngOnInit() {
-    this.eventService.getEvents().subscribe(events => {
+    const hasSeenPopup = localStorage.getItem('hasSeenPopup');
+    if(hasSeenPopup !== "true") {
+      this.openPopup();
+      localStorage.setItem('hasSeenPopup', 'true');
+    }
+    this.eventService.getEvents()!.subscribe(events => {
+      this.events = events.filter(event => !this.isFutureDate(event.date));
       this.events = events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-      this.events = this.events.slice(0, 10);
+      this.events = this.events.slice(0, 5);
     });
     this.memberService.getMember(this.featuredMemberName).subscribe(member => {
-      this.featuredMember = member;
+      this.featuredMember = member; console.log(this.featuredMember);
     })
   }
 
@@ -51,5 +63,20 @@ export class HomePageComponent {
     this.router.navigate([PageType]);
   }
 
-  protected readonly EMPageType = EMPageType;
+  private isFutureDate(dateStr: string): boolean {
+    const inputDate = new Date(dateStr);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return inputDate > today;
+  }
+
+  protected openPopup() {
+    setTimeout(() => {
+      this.dialog.open(UpcomingEventPopupComponent, {
+        width: '70vw',
+        height: '70vh',
+        disableClose: false
+      });
+    }, 500);
+  }
 }

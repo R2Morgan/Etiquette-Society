@@ -80,4 +80,10 @@ export class MetadataService extends BaseMarkdownService {
       map(md => this.parseSection(md, 'Affiliates'))
     );
   }
+
+  parseEvents(){
+    return this.getMetadata().pipe(
+      map(md => this.parseSection(md, 'Events'))
+    )
+  }
 }

@@ -1,0 +1,250 @@
+.memberships-section {
+  padding: 10rem 2rem 5rem 2rem;
+  background: #AFA587;
+  background: linear-gradient(135deg,rgba(175, 165, 135, 1) 1%, rgba(242, 228, 195, 1) 100%);
+  font-family: 'Montserrat', serif;
+  color: #1a1a1a;
+
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: #3a2f22;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5a4a3b;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .membership-table-wrapper {
+    overflow-x: auto;
+
+    .membership-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      min-width: 800px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+
+      th, td {
+        padding: 1.5rem 1rem;
+        border-bottom: 1px solid #d3cbb3;
+      }
+
+      th {
+        background-color: #705f3c;
+        color: #f2e4c3;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      td {
+        background-color: #fdfaf5;
+        font-size: 1rem;
+        vertical-align: middle;
+        color: #3a2f22;
+
+        &.check {
+          font-weight: 700;
+          font-size: 1.2rem;
+          color: #b98b5c;
+        }
+
+        &.price {
+          font-weight: 700;
+          font-size: 1.2rem;
+          color: #3a2f22;
+        }
+      }
+
+      tr:nth-child(even) td {
+        background-color: #f7f2eb;
+      }
+
+      tr:hover td {
+        background-color: #f4e9dc;
+        transition: 0.3s;
+      }
+
+      .price-row td {
+        background: #e5d9c4;
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+/* Scrollbar styling for table wrapper */
+.membership-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.membership-table-wrapper::-webkit-scrollbar-thumb {
+  background: #d3cbb3;
+  border-radius: 4px;
+}
+
+.membership-table-wrapper::-webkit-scrollbar-track {
+  background: #fdfaf5;
+}
+
+.membership-discounts {
+  padding: 5rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background: #52482c;
+  background: linear-gradient(135deg,rgba(82, 72, 44, 1) 1%, rgba(15, 14, 5, 1) 100%);
+  color: #3a2f22;
+
+  .tier-section {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f7f2eb 0%, #e5d9c4 100%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    &.neck-tie {
+      background: linear-gradient(135deg, #fdf6ed 0%, #f7f2eb 100%);
+    }
+
+    &.black-tie {
+      background: linear-gradient(135deg, #f2e4c3 0%, #e5d9c4 100%);
+    }
+
+    &.white-tie {
+      background: linear-gradient(135deg, #fff8f0 0%, #f2e4c3 100%);
+    }
+
+    .tier-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .tier-subtitle {
+      font-size: 1.1rem;
+      color: #5a4a3b;
+      margin-bottom: 2.5rem;
+    }
+
+    .discount-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      padding: 0 20vw;
+
+      .discount-card {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative; // needed for overlay
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          display: block;
+        }
+
+        .discount-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(185, 139, 92, 0.7); // soft gold semi-transparent
+          color: #fff;
+          font-weight: 700;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s;
+          text-align: center;
+        }
+
+        &:hover .discount-overlay {
+          opacity: 1;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+      }
+    }
+
+    .subscribe-btn {
+      background-color: #b98b5c;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: #a27b50;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .membership-discounts .discount-cards {
+    gap: 1rem;
+  }
+  .membership-discounts .discount-card {
+    width: 100px;
+    height: 100px;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+}

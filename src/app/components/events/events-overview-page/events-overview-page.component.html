@@ -1,1 +1,90 @@
-<p>events-overview works!</p>
+<div class="background">
+  <section class="title-section">
+    <h1>OUR EVENTS</h1>
+    <p>CURATED GATHERINGS FOR THE MODERN GENTLEMAN</p>
+  </section>
+  <div class="upcoming-section" *ngIf="eventsUpcoming?.length != 0">
+    <div class="section-divider">
+      <div class="section-header">UPCOMING EVENTS</div>
+      <div class="divider-line"></div>
+    </div>
+    <div class="event-wrapper" *ngFor="let event of eventsUpcoming; let i = index;">
+      <div class="date-wrapper">
+        <p class="month">{{ getMonth(event.date) }}</p>
+        <p class="day">{{ getDay(event.date) }}</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="assets/events/{{ event.slug }}/main.jpg">
+      </div>
+      <div class="content-wrapper">
+        <h2>{{ event.title }}</h2>
+        <div>
+          <i class="bi bi-geo-alt-fill"></i>
+          <p>{{ event.location }}</p>
+        </div>
+        <p class="clamp-text">{{ event.description }}</p>
+      </div>
+      <div class="expand-wrapper">
+        <a href="{{ event.link }}" target="_blank" *ngIf="event.link !== ''">
+          <i class="bi bi-arrow-up-right-square-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="2026-section" *ngIf="events2026?.length != 0">
+    <div class="section-divider">
+      <div class="section-header">2026</div>
+      <div class="divider-line"></div>
+    </div>
+    <div class="event-wrapper" *ngFor="let event of events2026; let i = index;">
+      <div class="date-wrapper">
+        <p class="month">{{ getMonth(event.date) }}</p>
+        <p class="day">{{ getDay(event.date) }}</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="assets/events/{{ event.slug }}/main.jpg">
+      </div>
+      <div class="content-wrapper">
+        <h2>{{ event.title }}</h2>
+        <div>
+          <i class="bi bi-geo-alt-fill"></i>
+          <p>{{ event.location }}</p>
+        </div>
+        <p class="clamp-text">{{ event.description }}</p>
+      </div>
+      <div class="expand-wrapper">
+        <a href="{{ event.link }}" target="_blank" *ngIf="event.link !== ''">
+        <i class="bi bi-arrow-up-right-square-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="2025-section" *ngIf="events2025?.length != 0">
+    <div class="section-divider">
+      <div class="section-header">2025</div>
+      <div class="divider-line"></div>
+    </div>
+    <div class="event-wrapper" *ngFor="let event of events2025; let i = index;">
+      <div class="date-wrapper">
+        <p class="month">{{ getMonth(event.date) }}</p>
+        <p class="day">{{ getDay(event.date) }}</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="assets/events/{{ event.slug }}/main.jpg">
+      </div>
+      <div class="content-wrapper">
+        <h2>{{ event.title }}</h2>
+        <div>
+          <i class="bi bi-geo-alt-fill"></i>
+          <p>{{ event.location }}</p>
+        </div>
+        <p class="clamp-text">{{ event.description }}</p>
+      </div>
+      <div class="expand-wrapper">
+        <a href="{{ event.link }}" target="_blank" *ngIf="event.link !== ''">
+          <i class="bi bi-arrow-up-right-square-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

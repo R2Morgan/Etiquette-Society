@@ -1,1 +1,111 @@
-<p>memberships-page works!</p>
+<section class="memberships-section">
+  <div class="container">
+    <h2 class="section-title animate" appScrollAnimate>Our Memberships</h2>
+    <p class="section-subtitle animate" appScrollAnimate>
+      Elevate your lifestyle. Each tier unlocks curated experiences, exclusive privileges, and unparalleled access.
+    </p>
+
+    <div class="membership-table-wrapper animate" appScrollAnimate>
+      <table class="membership-table">
+        <thead>
+        <tr>
+          <th>Benefit</th>
+          <th>Neck Tie Package</th>
+          <th>Black Tie Package</th>
+          <th>White Tie Package</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Access to Exclusive Digital Community</td>
+          <td class="check">✔️</td>
+          <td class="check">✔️</td>
+          <td class="check">✔️</td>
+        </tr>
+        <tr>
+          <td>Access to Event Photos & Videos</td>
+          <td class="check">✔️</td>
+          <td class="check">✔️</td>
+          <td class="check">✔️</td>
+        </tr>
+        <tr>
+          <td>Members-Only Event Per Month</td>
+          <td>1</td>
+          <td>✔️</td>
+          <td>✔️ + bring a guest</td>
+        </tr>
+        <tr>
+          <td>Partner Discounts</td>
+          <td>5 Base</td>
+          <td>10 Advanced</td>
+          <td>15+ Premium</td>
+        </tr>
+        <tr>
+          <td>Patron Status</td>
+          <td>—</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Early RSVP / Event Influence</td>
+          <td>—</td>
+          <td>✔️</td>
+          <td>✔️ + input on future events</td>
+        </tr>
+        <tr>
+          <td>Voting Rights</td>
+          <td>—</td>
+          <td>—</td>
+          <td>✔️ </td>
+        </tr>
+        <tr>
+          <td>White-Tie VIP Events</td>
+          <td>—</td>
+          <td>—</td>
+          <td>✔️</td>
+        </tr>
+        <tr class="price-row">
+          <td>Price / Month</td>
+          <td class="price">150 RON</td>
+          <td class="price">300 RON</td>
+          <td class="price">500 RON</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="membership-discounts">
+  <div class="container">
+    <div
+      *ngFor="let tier of tiers"
+      [ngClass]="['tier-section','animate', tier.className]"
+      appScrollAnimate
+    >
+
+      <h3 class="tier-title">
+        {{ tier.name }} Package – {{ tier.price }} RON / month
+      </h3>
+
+      <p class="tier-subtitle">
+        {{ tier.subtitle }}
+      </p>
+
+      <div class="discount-cards">
+
+        <div class="discount-card" *ngFor="let partner of tier.partners">
+          <img [src]="partner.image" [alt]="partner.name">
+          <div class="discount-overlay">
+            {{ partner.discount }}
+          </div>
+        </div>
+
+      </div>
+
+      <button class="subscribe-btn">
+        Subscribe to {{ tier.name }}
+      </button>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section
+  [style.background-image]="'url(assets/events/' + upcomingEvent!.slug! + '/main.jpg)'"
+  class="event-popup"
+>
+  <div class="overlay"></div>
+
+  <div class="dialog-header">
+    <button class="close-btn" mat-dialog-close>
+      <i class="bi bi-x"></i>
+    </button>
+  </div>
+
+  <div class="dialog-content">
+    <h1 class="event-title">{{ upcomingEvent?.title }}</h1>
+    <p class="event-date-location">
+      <span class="date">{{ upcomingEvent?.date | date:'fullDate' }}</span>
+      &nbsp;|&nbsp;
+      <span class="location">{{ upcomingEvent?.location }}</span>
+    </p>
+    <p class="event-description">{{ upcomingEvent?.description }}</p>
+    <button class="event-cta" (click)="redirect()">Reserve Your Spot</button>
+  </div>
+</section>

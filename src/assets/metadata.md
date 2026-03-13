@@ -5,13 +5,14 @@ version: "0.5.0"
 excerpt: "All the dynamic data for all the pages"
 ---
 
-# Latest Events (Latest 5)
+# Events
 events:
 - 01-Introduction
 - 01.5-Doamna_T
-- 02-Prosecco-Night
+- 02-Prosecco_Night
 - 03-Personal_Branding
 - 04-Cocktail_Night
+- 05-Shoe_Workshop
 
 # Featured Member
 - Flaviu_Celsie
