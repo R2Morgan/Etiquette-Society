@@ -1,7 +1,8 @@
 <header>
   <nav>
+    <!-- Desktop menu (your existing shadow menu stays as is) -->
     <div class="shadow" [class.hide]="isHidden">
-    <a routerLink="/podcast" class="menu-entry">PODCAST</a>
+      <a routerLink="/podcast" class="menu-entry">PODCAST</a>
       <div class="menu-entry dropdown">
         <span>OUR STORY</span>
         <div class="dropdown-content">
@@ -10,11 +11,29 @@
           <a routerLink="/why-join">Why Join?</a>
         </div>
       </div>
-    <a routerLink="">
-      <img src="assets/logo/logo_noBg.png" alt="Logo">
-    </a>
-    <a routerLink="/memberships" class="menu-entry">MEMBERSHIPS</a>
-    <a routerLink="/events-overview" class="menu-entry">EVENTS</a>
+      <a routerLink="">
+        <img src="assets/logo/logo_noBg.png" alt="Logo">
+      </a>
+      <a routerLink="/memberships" class="menu-entry">MEMBERSHIPS</a>
+      <a routerLink="/events-overview" class="menu-entry">EVENTS</a>
+    </div>
+
+    <!-- MOBILE HEADER -->
+    <div class="mobile-header">
+      <button class="hamburger" (click)="toggleMobileMenu()">&#9776;</button>
+      <a routerLink="">
+        <img src="assets/logo/logo_noBg.png" alt="Logo" class="logo">
+      </a>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" [class.open]="mobileMenuOpen">
+      <a routerLink="/podcast" (click)="closeMobileMenu()">PODCAST</a>
+      <a routerLink="/memberships" (click)="closeMobileMenu()">MEMBERSHIPS</a>
+      <a routerLink="/events-overview" (click)="closeMobileMenu()">EVENTS</a>
+      <a routerLink="/our-story" (click)="closeMobileMenu()">OUR STORY</a>
+      <a routerLink="/members-overview" (click)="closeMobileMenu()">MEMBERS</a>
+      <a routerLink="/why-join" (click)="closeMobileMenu()">WHY JOIN?</a>
     </div>
   </nav>
 </header>

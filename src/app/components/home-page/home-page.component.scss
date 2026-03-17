@@ -423,3 +423,156 @@
 .cards-box .card:nth-child(4) {
   transition-delay: 0.2s;
 }
+
+/* ======================
+   MOBILE / SMALL SCREENS
+   ====================== */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-section .button {
+    margin-top: 50vh;
+    padding: 1rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-gradient {
+    height: 25%;
+  }
+
+  /* Events Section */
+  .events-section .title {
+    font-size: 1.8rem;
+    padding: 0 5vw;
+  }
+
+  .events-section .undertitle {
+    font-size: 1.1rem;
+    padding: 0 5vw;
+  }
+
+  .carousel-item {
+    flex: 0 0 80%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .carousel-text h3 {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .carousel-text p {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+
+  .carousel-text .button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  /* Summary Section */
+  .summary-section {
+    padding: 8vh 2vw;
+  }
+
+  .cards-box {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+    margin: 5vh 2vw;
+  }
+
+  .card-text, .cardD-text {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .cardD-text h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .cardD-text p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .cardD-text .button {
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 0 0 0;
+  }
+
+  /* Buttons */
+  .button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.8rem;
+  }
+}
+
+/* ======================
+   EXTRA SMALL SCREENS / MOBILE
+   ====================== */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-section .button {
+    margin-top: 45vh;
+    padding: 0.8rem 2rem;
+    font-size: 0.85rem;
+  }
+
+  .carousel-item {
+    flex: 0 0 90%;
+    max-width: 300px;
+  }
+
+  .carousel-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .carousel-text p {
+    font-size: 0.75rem;
+  }
+
+  .carousel-text .button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .events-section .title {
+    font-size: 1.5rem;
+  }
+
+  .events-section .undertitle {
+    font-size: 1rem;
+    padding: 0 4vw;
+  }
+
+  .cards-box {
+    grid-template-columns: 1fr;
+    margin: 5vh 2vw;
+  }
+
+  .card-text h2, .cardD-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .card-text p, .cardD-text p {
+    font-size: 0.85rem;
+  }
+
+  .card-text button, .cardD-text .button {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .summary-section {
+    padding: 6vh 2vw;
+  }
+}

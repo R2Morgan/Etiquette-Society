@@ -124,3 +124,83 @@ section div{
 .hasNoDescription{
   backdrop-filter: blur(6px) grayscale(1) !important;
 }
+
+
+@media (max-width: 768px) {
+
+  .wrapper {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    background-size: 300%;
+    background-position-y: 1.5vh;
+  }
+
+  section {
+    gap: 6vh;
+  }
+
+  .founders-section {
+    margin-top: 15vh;
+  }
+
+  .affiliates-section {
+    margin-bottom: 6vh;
+  }
+
+  section div {
+    justify-content: center;
+    gap: 5vw;
+  }
+
+  .section-2,
+  .section-3 {
+    padding: 0 5vw;
+  }
+
+  .section-3 div {
+    row-gap: 5vh;
+  }
+
+  .framed-img img {
+    width: 42vw;
+    height: 56vw;
+  }
+
+  .framed-img .overlay {
+    opacity: 1;
+    width: 80%;
+    padding: 0.6rem;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.2)
+    );
+
+    backdrop-filter: blur(0);
+  }
+
+  .framed-img:hover .overlay {
+    opacity: 1;
+  }
+
+  .framed-img:hover {
+    transform: none;
+  }
+
+  .framed-img .overlay h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  h1 {
+    position: fixed;
+    bottom: 4vh;
+    font-size: 1.6rem;
+    z-index: 10;
+  }
+
+  .hasNoDescription{
+    backdrop-filter: grayscale(1) !important;
+  }
+}

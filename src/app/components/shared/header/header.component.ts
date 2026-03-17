@@ -13,18 +13,22 @@ import {RouterLink} from "@angular/router";
 export class HeaderComponent {
   lastScrollTop = 0;
   isHidden = false;
+  mobileMenuOpen = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const st = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (st > this.lastScrollTop && st > 50) {
-      // scrolling down
-      this.isHidden = true;
-    } else {
-      // scrolling up
-      this.isHidden = false;
+    if (window.innerWidth > 768) { // only apply hide effect on desktop
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      this.isHidden = st > this.lastScrollTop && st > 50;
+      this.lastScrollTop = st <= 0 ? 0 : st;
     }
-    this.lastScrollTop = st <= 0 ? 0 : st; // prevent negative scroll
+  }
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen = false;
   }
 }

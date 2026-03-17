@@ -43,7 +43,7 @@ export class HomePageComponent {
     }
     this.eventService.getEvents()!.subscribe(events => {
       this.events = events.filter(event => !this.isFutureDate(event.date));
-      this.events = events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      this.events = this.events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       this.events = this.events.slice(0, 5);
     });
     this.memberService.getMember(this.featuredMemberName).subscribe(member => {
@@ -71,12 +71,13 @@ export class HomePageComponent {
   }
 
   protected openPopup() {
-    setTimeout(() => {
-      this.dialog.open(UpcomingEventPopupComponent, {
-        width: '70vw',
-        height: '70vh',
-        disableClose: false
-      });
-    }, 500);
+    this.dialog.open(UpcomingEventPopupComponent, {
+      width: '90vw',           // almost full width on mobile
+      maxWidth: '700px',       // cap for desktop
+      height: 'auto',          // let content decide height
+      maxHeight: '70vh',       // but don’t overflow screen
+      panelClass: 'event-dialog',
+      disableClose: false
+    });
   }
 }

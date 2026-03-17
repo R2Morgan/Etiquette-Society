@@ -1,3 +1,5 @@
+$tan-color: #f2e4c3;
+
 section {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -336,37 +338,73 @@ section {
 }
 
 @media (max-width: 768px) {
-  .cta-content h2 {
-    font-size: 2rem;
+
+  .hero-section {
+    position: relative;
+    display: block;
   }
 
-  .cta-content p {
-    font-size: 1.1rem;
+  .hero-image {
+    height: 75vh;
+    width: 100%;
   }
 
-  .cta-button {
-    padding: 0.8rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .benefits-section {
-    padding: 8vh 5vw;
+  .hero-image img {
+    height: 130%;
   }
 
-  .benefit-card {
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10vh 6vw 0 6vw;
+    text-align: center;
   }
 
-  .benefit-image {
-    height: 200px;
+  .hero-image .overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.7) 100%
+    );
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    color: $tan-color;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content button {
+    margin-top: 0;
+    width: 100%;
+    max-width: 260px;
+    color: $tan-color;
+    border-color: $tan-color;
+  }
+
+  .why-section {
+    padding: 6vh 6vw;
+    gap: 8vh;
   }
 
   .why-row,
   .why-row.reverse {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .why-text {
@@ -374,34 +412,79 @@ section {
     text-align: center;
   }
 
+  .why-text h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .why-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .why-row::before,
   .why-row.reverse::before {
     display: none;
   }
 
-  .why-text h2 {
-    font-size: 2.2rem;
+  .image-wrapper {
+    border-radius: 12px;
   }
 
-  .why-text p {
-    font-size: 1.1rem;
+  .benefits-section {
+    padding: 6vh 5vw;
+    gap: 5vh;
   }
 
-  .hero-section {
+  .benefits-header h2 {
+    font-size: 2rem;
+  }
+
+  .benefits-header p {
+    font-size: 1rem;
+  }
+
+  .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .hero-content {
-    max-width: 90%;
-    text-align: center;
-    padding: 8vh 5%;
+  .benefit-card {
+    border-radius: 12px;
   }
 
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .benefit-image {
+    height: 180px;
   }
 
-  .hero-content button {
-    align-self: center;
+  .benefit-text {
+    padding: 1.2rem;
+  }
+
+  .benefit-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .benefit-text p {
+    font-size: 0.95rem;
+  }
+
+  .cta-section {
+    padding: 8vh 6vw;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .cta-content p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
   }
 }

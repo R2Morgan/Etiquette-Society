@@ -216,3 +216,161 @@ a{
 .main-profile-picture:hover{
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+
+  .section1{
+    padding-top: 15vh;
+    padding-bottom: 20vh;
+    position: relative;
+  }
+
+  .image1{
+    height: 30vh;
+    width: 25vw;
+  }
+
+  .image2{
+    height: 40vh;
+    width: 25vw;
+  }
+
+  .image3{
+    height: 30vh;
+    width: 25vw;
+  }
+
+  .name{
+    font-size: 2rem;
+    top: 40vh;
+  }
+
+  .name span{
+    width: unset;
+  }
+
+  .membership{
+    top: 60vh;
+  }
+
+  .section2 {
+    padding: 8vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vh;
+    background: linear-gradient(135deg, rgba(124,82,35,1) 0%, rgba(62,35,4,1) 100%);
+  }
+
+  .section2 .main {
+    display: flex;
+    flex-direction: column !important;   /* FORCE override */
+    align-items: center;
+    width: 100%;
+  }
+
+  .section2 .main > div {
+    width: 100% !important;
+  }
+
+  .main > div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    align-items: center;
+  }
+
+  .paragraph1, .paragraph2 {
+    width: 90% !important;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background: rgba(170,105,36,0.65);
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(37,20,7,0.6);
+    text-align: center;
+    margin-left: 0 !important;
+  }
+
+  .paragraph1{
+    margin-bottom: 2vh;
+  }
+
+  .paragraph2{
+    margin-bottom: 2vh;
+  }
+
+  span{
+    left: 0;
+  }
+
+  .main-profile-picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    outline: 2px solid #bca372;
+    box-shadow: 0 0 25px #f2e4c3;
+    transition: transform 0.4s ease;
+    margin-left: 0;
+    margin-top: 7vh;
+  }
+
+  .main-profile-picture:hover .profile-image {
+    transform: scale(1.05);
+  }
+
+  .instagram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    background: rgba(242, 228, 195, 0.95);
+    padding: 10px 16px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(37,20,7,0.5);
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background: rgb(92,59,22);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bca372;
+    font-size: 1.3rem;
+  }
+
+  .link {
+    width: auto;
+    padding: 0;
+    background: none;
+    overflow: hidden;
+  }
+
+  .link a {
+    display: block;
+    max-width: 55vw;
+    font-size: 0.85rem;
+    color: rgb(37,20,7);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .instagram:hover .link{
+    width: unset;
+    padding: 12px 25px 12px 50px;
+  }
+}

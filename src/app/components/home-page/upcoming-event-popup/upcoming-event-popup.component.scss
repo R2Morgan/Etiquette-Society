@@ -35,6 +35,7 @@ $tan-color: #f2e4c3;
   position: relative;
   z-index: 2;
   max-width: 600px;
+  padding: 2rem 1.5rem;
 }
 
 .dialog-header {
@@ -95,4 +96,55 @@ a{
 .event-cta:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.event-dialog .mat-mdc-dialog-container {
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+  .event-popup {
+    padding: 2.5rem 2rem;
+    align-items: center;
+  }
+
+  .dialog-content {
+    max-width: 90vw;
+    width: 100%;
+  }
+
+  .event-title {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .event-date-location {
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .event-description {
+    display: none;
+  }
+
+  .event-cta {
+    width: 100%;
+    padding: 1.1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .event-title {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .event-description {
+    margin-bottom: 1.8rem;
+  }
 }

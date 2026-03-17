@@ -85,4 +85,10 @@ export class MembershipsPageComponent {
     }
   ];
 
+  toggleDiscount(event: any) {
+    const overlay = event.currentTarget.querySelector('.discount-overlay');
+    if (overlay) {
+      overlay.classList.toggle('visible'); // toggle visibility class
+    }
+  }
 }

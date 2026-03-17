@@ -28,7 +28,6 @@
   transition: opacity 1s ease;
 }
 
-/* --- ROOT VARIABLES --- */
 :root {
   --glass: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.15);
@@ -36,7 +35,6 @@
   --shift-x: 28vw;
 }
 
-/* --- CONTAINER --- */
 .carousel-container {
   font-family: 'Montserrat', sans-serif;
   padding-top: 30vh;
@@ -50,7 +48,6 @@
   color: white;
 }
 
-/* --- STAGE --- */
 .carousel-stage {
   position: relative;
   width: 100vw;
@@ -61,7 +58,6 @@
   transform-style: preserve-3d;
 }
 
-/* --- CARD BASE --- */
 .carousel-card {
   position: absolute;
   width: clamp(280px, 25vw, 420px);
@@ -76,7 +72,6 @@
   cursor: pointer;
 }
 
-/* --- ACTIVE (CENTER) --- */
 .carousel-card.active {
   transform: translate3d(0, 0, 300px) rotateY(0deg) scale(1);
   opacity: 1;
@@ -84,7 +79,6 @@
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
 }
 
-/* --- LEFT --- */
 .carousel-card.left {
   transform: translate(-400px, 50px)
   rotateY(35deg) scale(0.85);
@@ -92,7 +86,6 @@
   z-index: 5;
 }
 
-/* --- RIGHT --- */
 .carousel-card.right {
   transform: translate(400px, 50px)
   rotateY(-35deg) scale(0.85);
@@ -100,7 +93,6 @@
   z-index: 5;
 }
 
-/* --- FAR LEFT --- */
 .carousel-card.far-left {
   transform: translate(-600px, 100px)
   rotateY(45deg) scale(0.6);
@@ -108,7 +100,6 @@
   z-index: 1;
 }
 
-/* --- FAR RIGHT --- */
 .carousel-card.far-right {
   transform: translate(600px, 100px)
   rotateY(-45deg) scale(0.6);
@@ -116,21 +107,18 @@
   z-index: 1;
 }
 
-/* --- HIDDEN --- */
 .carousel-card.hidden {
   transform: translate3d(0, 0, -1000px) scale(0.1);
   opacity: 0;
   z-index: 0;
 }
 
-/* --- IMAGE --- */
 .card-image {
   height: 60%;
   background-size: cover;
   background-position: center;
 }
 
-/* --- CONTENT --- */
 .card-content {
   padding: 20px;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
@@ -172,7 +160,6 @@
   font-size: 12px;
 }
 
-/* --- CONTROLS --- */
 .carousel-controls {
   display: flex;
   align-items: center;
@@ -201,7 +188,6 @@
   transform: scale(1.2);
 }
 
-/* --- DOTS --- */
 .pagination-indicators {
   display: flex;
   gap: 8px;
@@ -292,37 +278,126 @@
   transform: scale(1.02);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .content-wrapper {
-    flex-direction: column-reverse;
-    gap: 30px;
-  }
-
-  .text-block {
-    padding: 0 10px;
-    text-align: center;
-  }
-}
-
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
+
+  .carousel-container{
+    padding-top: 10rem;
+  }
+
   :root {
     --shift-x: 38vw;
   }
 
   .carousel-card {
-    width: 75vw;
-    height: 450px;
+    width: 80vw;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
   }
 
-  .carousel-card.left {
-    transform: translate3d(-45%, 0, -250px)
-    rotateY(40deg) scale(0.8);
+  .carousel-card.active {
+    transform: translateZ(150px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
   }
 
+  .carousel-card.left,
   .carousel-card.right {
-    transform: translate3d(45%, 0, -250px)
-    rotateY(-40deg) scale(0.8);
+    transform: translateX(40%) rotateY(var(--rotateY, 40deg)) scale(0.85);
+    opacity: 0.5;
+  }
+
+  .carousel-card.far-left,
+  .carousel-card.far-right {
+    transform: translateX(80%) rotateY(var(--rotateY, 45deg)) scale(0.65);
+    opacity: 0.25;
+  }
+
+  .carousel-stage {
+    height: 380px;
+  }
+
+  .card-image {
+    height: 65%;
+  }
+
+  .card-content {
+    height: 35%;
+    padding: 15px;
+  }
+
+  .card-header h3 {
+    font-size: 14px;
+  }
+
+  .tag-pill {
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+
+  .card-content p {
+    font-size: 11px;
+  }
+
+  .card-footer small {
+    font-size: 10px;
+  }
+
+  .carousel-controls {
+    gap: 15px;
+    padding: 8px 15px;
+    margin-top: -40px;
+    border-radius: 50px;
+  }
+
+  .nav-btn {
+    font-size: 1.8rem;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .dot.active {
+    width: 14px;
+  }
+
+  .main-section h1 {
+    font-size: 2rem;
+  }
+
+  .main-section p.intro {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  .content-wrapper {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .text-block {
+    flex: 1 1 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .image-block {
+    flex: 1 1 100%;
+  }
+
+  .image-block img {
+    max-width: 90%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+    transition: transform 0.4s ease;
+  }
+
+  .image-block img:hover {
+    transform: scale(1.04);
   }
 }
