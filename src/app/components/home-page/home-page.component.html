@@ -30,26 +30,29 @@
   <p class="animate" appScrollAnimate>Curated highlights of our society — the people, the podcast, the stories,
     the memberships that define us</p>
   <div class="cards-box">
-    <div class="card cardA animate" appScrollAnimate>
+    <div class="card cardA animate" (click)="toggleCard(0, $event)"
+         [class.active]="activeCardIndex === 0" appScrollAnimate>
       <img src="assets/podcasts/main.png" alt="Podcast Cover">
-      <div class="card-text">
+      <div class="card-text" (click)="$event.stopPropagation()">
         <h2>Etichete si Suete</h2>
         <p>Discover our new Podcast - Conversations on character, culture, discipline, and the art of living well.</p>
         <button class="button" (click)="goToPage(EMPageType.PODCAST)">Listen to the Latest Episode</button>
       </div>
     </div>
-    <div class="card cardB animate" appScrollAnimate>
+    <div class="card cardB animate" (click)="toggleCard(1, $event)"
+         [class.active]="activeCardIndex === 1" appScrollAnimate>
       <img [src]="featuredMember?.mainImage" [alt]="featuredMember?.name" />
-      <div class="card-text">
+      <div class="card-text" (click)="$event.stopPropagation()">
         <h2>Member Highlight</h2>
         <h3>- {{featuredMember?.name}} -</h3>
         <p>{{featuredMember?.description}}</p>
         <button class="button" (click)="goToPage(EMPageType.MEMBER)">Meet Him</button>
       </div>
     </div>
-    <div class="card cardC animate" appScrollAnimate>
+    <div class="card cardC animate" (click)="toggleCard(2, $event)"
+         [class.active]="activeCardIndex === 2" appScrollAnimate>
       <img src="assets/others/Our_Story.jpg" alt="Our Story">
-      <div class="card-text">
+      <div class="card-text" (click)="$event.stopPropagation()">
         <h2>The Story Behind the Etiquette</h2>
         <p>How a modern brotherhood rooted in tradition came to life.</p>
         <button class="button" (click)="goToPage(EMPageType.OUR_STORY)">Discover Our Journey</button>

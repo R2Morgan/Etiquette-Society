@@ -1,3 +1,6 @@
+$brown-color: #2b2210;
+$tan-color: #f2e4c3;
+
 img {
   height: 20vh;
 }
@@ -132,7 +135,7 @@ a {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: $tan-color;
     cursor: pointer;
   }
 
@@ -162,7 +165,7 @@ a {
 
   .mobile-menu a {
     padding: 1.5rem 0;
-    color: #f2e4c3;
+    color: $tan-color;
     text-decoration: none;
     font-size: 1.2rem;
     border-bottom: 1px solid rgba(242, 228, 195, 0.3);

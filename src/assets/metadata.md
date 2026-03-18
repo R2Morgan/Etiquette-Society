@@ -34,11 +34,11 @@ patrons:
 - Flaviu_Celsie
 - Sergiu_Stan
 - Cornelius_Muresan
+- Andrei_Pop
 
 # Members
 members:
 - Alexandru_Timbus
-- Andrei_Pop
 - Catalin_Filip
 - Yan_Marin
 - George_Purcar

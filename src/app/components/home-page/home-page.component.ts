@@ -28,6 +28,7 @@ export class HomePageComponent {
   featuredMember: MemberMetadata | null = null;
   featuredMemberName = "Flaviu_Celsie";
   protected readonly EMPageType = EMPageType;
+  activeCardIndex: number | null = null;
 
   constructor(private router: Router,
               private eventService: EventService,
@@ -79,5 +80,13 @@ export class HomePageComponent {
       panelClass: 'event-dialog',
       disableClose: false
     });
+  }
+
+  toggleCard(i: number, event: MouseEvent) {
+    const isActive = this.activeCardIndex === i;
+    if (isActive) {
+      return;
+    }
+    this.activeCardIndex = i;
   }
 }
