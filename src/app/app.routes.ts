@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {HomePageComponent} from "./components/home-page/home-page.component";
 import {EventsOverviewPageComponent} from "./components/events/events-overview-page/events-overview-page.component";
 import {MembersOverviewPageComponent} from "./components/members/members-overview-page/members-overview-page.component";
@@ -7,6 +7,7 @@ import {MembershipsPageComponent} from "./components/memberships-page/membership
 import {OurStoryPageComponent} from "./components/our-story-page/our-story-page.component";
 import {PodcastPageComponent} from "./components/podcast-page/podcast-page.component";
 import {WhyJoinPageComponent} from "./components/why-join-page/why-join-page.component";
+import {NgModule} from "@angular/core";
 
 export const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -19,3 +20,14 @@ export const routes: Routes = [
   {path: 'podcast', component: PodcastPageComponent},
   {path: 'why-join', component: WhyJoinPageComponent},
 ];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+};
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes, routerOptions)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
