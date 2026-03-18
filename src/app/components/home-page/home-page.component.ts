@@ -8,6 +8,8 @@ import {EMPageType} from "../../enums/EMPageType";
 import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 import {UpcomingEventPopupComponent} from "./upcoming-event-popup/upcoming-event-popup.component";
+import {MetadataService} from "../../services/metadata.service";
+import {switchMap} from "rxjs";
 
 @Component({
   selector: 'home-page',
@@ -33,7 +35,8 @@ export class HomePageComponent {
   constructor(private router: Router,
               private eventService: EventService,
               private memberService: MemberService,
-              private dialog: MatDialog) {
+              private dialog: MatDialog,
+              private metadataService: MetadataService) {
   }
 
   ngOnInit() {
@@ -47,9 +50,14 @@ export class HomePageComponent {
       this.events = this.events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       this.events = this.events.slice(0, 5);
     });
-    this.memberService.getMember(this.featuredMemberName).subscribe(member => {
-      this.featuredMember = member; console.log(this.featuredMember);
-    })
+    this.metadataService.parseFeaturedMember()
+      .pipe(
+        switchMap(name => this.memberService.getMember(name))
+      )
+      .subscribe(member => {
+        this.featuredMember = member;
+        console.log('Featured member:', this.featuredMember);
+      });
   }
 
   ngAfterViewInit() {
@@ -73,10 +81,10 @@ export class HomePageComponent {
 
   protected openPopup() {
     this.dialog.open(UpcomingEventPopupComponent, {
-      width: '90vw',           // almost full width on mobile
-      maxWidth: '700px',       // cap for desktop
-      height: 'auto',          // let content decide height
-      maxHeight: '70vh',       // but don’t overflow screen
+      width: '90vw',
+      maxWidth: '700px',
+      height: 'auto',
+      maxHeight: '70vh',
       panelClass: 'event-dialog',
       disableClose: false
     });

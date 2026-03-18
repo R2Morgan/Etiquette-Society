@@ -1,5 +1,5 @@
 ---
-title: "Society Data"
+title: "Etiquette Society Data"
 date: "03.03.2026"
 version: "0.5.0"
 excerpt: "All the dynamic data for all the pages"
@@ -15,10 +15,15 @@ events:
 - 05-Shoe_Workshop
 
 # Featured Member
-- Flaviu_Celsie
+- Stefan_Dobrescu
 
 # Latest Podcast Episode
-- 01
+- https://www.youtube.com/embed/XvyyPe7oJlE?si=IJvMs-OQU5wpHzu0
+
+# Latest Episodes
+- https://player.spotify.com/embed/episode/50pMpESjcveJyK0bC8xQed?utm_source=generator
+- https://player.spotify.com/embed/episode/5oqO4tlvxto6Z8ke1rAmpC?utm_source=generator
+- https://player.spotify.com/embed/episode/7lsuayh4eOD7x0b6hrj6Jt?utm_source=generator
 
 # Founders
 founders:

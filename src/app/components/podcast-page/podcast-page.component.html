@@ -50,10 +50,15 @@
           </div>
           <div class="animate card-animation4" appScrollAnimate>
             <div class="card cardD">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ipF7F1Pc8_k?si=A15iqAw6b5mO9Wzl"
-                      title="YouTube video player" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              <iframe
+                data-testid="embed-iframe"
+                style="border-radius:12px"
+                [src]="latestPodcast"
+                width="100%" height="100%" frameborder="0" allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+              </iframe>
             </div>
           </div>
         </div>
@@ -64,29 +69,20 @@
     <h1 class="animate" appScrollAnimate>OUR LATEST EPISODES</h1>
     <p class="animate" appScrollAnimate>Discover the rules behind the art of being a gentleman</p>
     <div class="episodes-wrapper">
-      <div class="episode animate" appScrollAnimate>
-        <iframe data-testid="embed-iframe" style="border-radius:12px"
-                src="https://player.spotify.com/embed/episode/50pMpESjcveJyK0bC8xQed?utm_source=generator"
-                width="100%" height="152" frameborder="0" allowfullscreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-      </div>
-      <div class="episode-separator animate" appScrollAnimate></div>
-      <div class="episode animate" appScrollAnimate>
-        <iframe data-testid="embed-iframe" style="border-radius:12px"
-                src="https://player.spotify.com/embed/episode/5oqO4tlvxto6Z8ke1rAmpC?utm_source=generator"
-                width="100%" height="152" frameborder="0" allowfullscreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-      </div>
-      <div class="episode-separator animate" appScrollAnimate></div>
-      <div class="episode animate" appScrollAnimate>
-        <iframe data-testid="embed-iframe" style="border-radius:12px"
-                src="https://player.spotify.com/embed/episode/7lsuayh4eOD7x0b6hrj6Jt?utm_source=generator"
-                width="100%" height="152" frameborder="0" allowfullscreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-      </div>
+      <ng-container *ngFor="let episode of previousEpisodes; let i = index">
+        <div class="episode animate" appScrollAnimate>
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius:12px"
+            [src]="episode"
+            width="100%" height="152" frameborder="0"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+        <div *ngIf="i < previousEpisodes.length - 1" class="episode-separator animate" appScrollAnimate></div>
+      </ng-container>
     </div>
   </section>
 </div>

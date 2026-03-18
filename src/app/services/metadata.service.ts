@@ -86,4 +86,30 @@ export class MetadataService extends BaseMarkdownService {
       map(md => this.parseSection(md, 'Events'))
     )
   }
+
+  parseFeaturedMember() {
+    return this.getMetadata().pipe(
+      map(md => {
+        const lines = md.split('\n');
+        const index = lines.findIndex(l => l.trim().toLowerCase() === '# featured member');
+        return index >= 0 ? lines[index + 1].trim().replace(/^-?\s*/, '') : '';
+      })
+    );
+  }
+
+  parseLatestPodcast() {
+    return this.getMetadata().pipe(
+      map(md => {
+        const lines = md.split('\n');
+        const index = lines.findIndex(l => l.trim().toLowerCase() === '# latest podcast episode');
+        return index >= 0 ? lines[index + 1].trim().replace(/^-?\s*/, '') : '';
+      })
+    );
+  }
+
+  parseLatestEpisodes() {
+    return this.getMetadata().pipe(
+      map(md => this.parseSection(md, 'Latest Episodes'))
+    );
+  }
 }
