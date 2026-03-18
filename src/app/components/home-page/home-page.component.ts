@@ -69,7 +69,12 @@ export class HomePageComponent {
   }
 
   goToPage(PageType: EMPageType) {
-    this.router.navigate([PageType]);
+    if(PageType !== EMPageType.MEMBER) {
+      this.router.navigate([PageType]);
+    } else {
+      let routeString = PageType + '/' + this.featuredMember?.slug;
+      this.router.navigate([routeString]);
+    }
   }
 
   private isFutureDate(dateStr: string): boolean {
