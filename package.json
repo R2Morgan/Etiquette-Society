@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "start w. mobile": "ng serve --host 0.0.0.0",
-    "deploy": "ng deploy --base-href=/Etiquette-Society/",
+    "deploy": "ng deploy --base-href=/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
