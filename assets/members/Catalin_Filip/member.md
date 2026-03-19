@@ -3,7 +3,7 @@ name: "Catalin Filip"
 mainImage: "main.jpg"
 description: "Cătălin Filip este un tânăr antreprenor și consultant financiar, acreditat ASF, co-fondator al NoChaos Group"
 rank: "Patron"
-instagram: https://www.instagram.com/p/DV8uPjzin0H/?igsh=MWM4bHQwODgzMjFlNg==
+instagram: "https://www.instagram.com/cata_filip/"
 ---
 
 Member Highlight: Cătălin Filip
