@@ -75,7 +75,7 @@ export class OurStoryPageComponent {
       title: "The Genesis",
       description: "Etiquette Society began when the right idea met the right timing, uniting two founders and a growing demand for a community of refined men.",
       text: "Etiquette Society began not with a grand plan, but with perfect timing.<br><br>" +
-        "Stefan Dobrescu and Cristian Miron Lapadan first met at an event — exchanged little more than presence — and then went an entire year without speaking. Stefan forgot the encounter entirely. Cristian, however, never forgot the idea that had formed.<br><br>" +
+        "Stefan Dobrescu and Cristian Miron Lapadean first met at an event — exchanged little more than presence — and then went an entire year without speaking. Stefan forgot the encounter entirely. Cristian, however, never forgot the idea that had formed.<br><br>" +
         "For months, Cristian would occasionally see Stefan pass by the place where he worked, considering whether to approach him and share his vision of a community built around classic men’s style, etiquette, and standards. He never did.<br><br>" +
         "Until one day, he sent a message on Instagram.<br><br>" +
         "The timing was precise. Around that same period, Stefan had been receiving numerous messages from men who followed his content on classic menswear — asking whether a group like this existed, somewhere refinement, discipline, and elegance were taken seriously.<br><br>" +

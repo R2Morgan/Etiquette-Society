@@ -36,10 +36,10 @@ export class MembershipsPageComponent {
       className: 'neck-tie',
       partners: [
         { image: 'assets/partners/tudor.jpg', name: 'Tudor Tailor', discount: '5%' },
-        { image: 'assets/partners/mensclub.png', name: 'Mens Club', discount: '10%' },
         { image: 'assets/partners/popantofaria.jpeg', name: 'Popantofaria', discount: '10%' },
-        { image: 'assets/partners/tellastory.jpeg', name: 'Tell a Story', discount: '15%' },
-        { image: 'assets/partners/meron.png', name: 'Meron', discount: '10%' }
+        { image: 'assets/partners/dot.webp', name: 'DOT', discount: '5%' },
+        { image: 'assets/partners/meron.png', name: 'Meron', discount: '10%' },
+        { image: 'assets/partners/mezum.jpeg', name: 'Mezum', discount: '5%' }
       ]
     },
     {
@@ -48,16 +48,16 @@ export class MembershipsPageComponent {
       subtitle: 'Expanded discounts and curated experiences.',
       className: 'black-tie',
       partners: [
-        { image: 'assets/partners/tudor.jpg', name: 'Tudor Tailor', discount: '5%' },
-        { image: 'assets/partners/mensclub.png', name: 'Mens Club', discount: '10%' },
+        { image: 'assets/partners/tudor.jpg', name: 'Tudor Tailor', discount: '10%' },
         { image: 'assets/partners/artizan.png', name: 'Artizan', discount: '10%' },
-        { image: 'assets/partners/popantofaria.jpeg', name: 'Popantofaria', discount: '10%' },
-        { image: 'assets/partners/tellastory.jpeg', name: 'Tell a Story', discount: '15%' },
-        { image: 'assets/partners/jospalaria.png', name: 'Jos Palaria', discount: '10%' },
-        { image: 'assets/partners/deionescu.jpg', name: 'De Ionescu', discount: '10%' },
-        { image: 'assets/partners/mannen.png', name: 'Mannen', discount: '15%' },
+        { image: 'assets/partners/popantofaria.jpeg', name: 'Popantofaria', discount: '15%' },
+        { image: 'assets/partners/tellastory.jpeg', name: 'Tell a Story', discount: '10%' },
         { image: 'assets/partners/meron.png', name: 'Meron', discount: '10%' },
-        { image: 'assets/partners/dot.webp', name: 'DOT', discount: '15%' }
+        { image: 'assets/partners/dot.webp', name: 'DOT', discount: '10%' },
+        { image: 'assets/partners/mezum.jpeg', name: 'Mezum', discount: '10%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '10%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '10%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '15%' }
       ]
     },
     {
@@ -67,20 +67,20 @@ export class MembershipsPageComponent {
       className: 'white-tie',
       partners: [
         { image: 'assets/partners/tudor.jpg', name: 'Tudor Tailor', discount: '15%' },
-        { image: 'assets/partners/mensclub.png', name: 'Mens Club', discount: '10%' },
-        { image: 'assets/partners/mezum.jpeg', name: 'Mezum', discount: '20%' },
+        { image: 'assets/partners/mezum.jpeg', name: 'Mezum', discount: '15%' },
         { image: 'assets/partners/artizan.png', name: 'Artizan', discount: '25%' },
         { image: 'assets/partners/zesso.png', name: 'Zesso', discount: '10%' },
-        { image: 'assets/partners/popantofaria.jpeg', name: 'Popantofaria', discount: '15%' },
+        { image: 'assets/partners/popantofaria.jpeg', name: 'Popantofaria', discount: '20%' },
         { image: 'assets/partners/tellastory.jpeg', name: 'Tell a Story', discount: '15%' },
-        { image: 'assets/partners/jospalaria.png', name: 'Jos Palaria', discount: '10%' },
-        { image: 'assets/partners/deionescu.jpg', name: 'De Ionescu', discount: '10%' },
-        { image: 'assets/partners/mannen.png', name: 'Mannen', discount: '15%' },
-        { image: 'assets/partners/theurbanties.png', name: 'Urban Ties', discount: '20%' },
         { image: 'assets/partners/meron.png', name: 'Meron', discount: '10%' },
         { image: 'assets/partners/dot.webp', name: 'DOT', discount: '15%' },
-        { image: 'assets/partners/barbersociety.png', name: 'Barber Society', discount: '15%' },
-        { image: 'assets/partners/toulouse.png', name: 'Toulouse', discount: '10%' }
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '10%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '10%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '15%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '20%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '20%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '20%' },
+        { image: 'assets/partners/unknown.webp', name: 'To Be Announced', discount: '15%' }
       ]
     }
   ];
