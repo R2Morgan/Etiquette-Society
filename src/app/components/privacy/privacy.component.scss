@@ -1,0 +1,81 @@
+.main{
+  background-color: #fbeac9;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  font-family: Georgia, serif;
+  color: #fdefce;
+  line-height: 1.8;
+}
+
+.org {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #8a7d65;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 20vh;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.date {
+  text-align: center;
+  font-size: 13px;
+  color: #8a7d65;
+  margin-bottom: 48px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #d4c9b0;
+  margin: 36px 0;
+}
+
+h2 {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #8a7d65;
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 15px;
+  color: #3a3528;
+  margin-bottom: 16px;
+}
+
+ul {
+  margin: 0 0 16px 20px;
+
+  li {
+    font-size: 15px;
+    color: #3a3528;
+    margin-bottom: 8px;
+  }
+}
+
+a {
+  color: #56513D;
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 12px;
+  color: #8a7d65;
+  letter-spacing: 1px;
+}

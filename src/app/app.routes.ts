@@ -8,6 +8,7 @@ import {OurStoryPageComponent} from "./components/our-story-page/our-story-page.
 import {PodcastPageComponent} from "./components/podcast-page/podcast-page.component";
 import {WhyJoinPageComponent} from "./components/why-join-page/why-join-page.component";
 import {NgModule} from "@angular/core";
+import {PrivacyComponent} from "./components/privacy/privacy.component";
 
 export const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -19,6 +20,7 @@ export const routes: Routes = [
   {path: 'our-story', component: OurStoryPageComponent},
   {path: 'podcast', component: PodcastPageComponent},
   {path: 'why-join', component: WhyJoinPageComponent},
+  {path: 'privacy', component: PrivacyComponent}
 ];
 
 const routerOptions: ExtraOptions = {
